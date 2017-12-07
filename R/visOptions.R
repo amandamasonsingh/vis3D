@@ -17,6 +17,7 @@
 #' @param showAnimationControls : boolean. Default to true. If true, animation controls are created at the bottom of the Graph. The animation controls consists of buttons previous, start/stop, next, and a slider showing the current frame. Only applicable when the provided data contains an animation.
 #' @param showGrid : boolean. Default to true. If true, grid lines are draw in the x-y surface (the bottom of the 3d graph).
 #' @param showPerspective : boolean. Default to true. If true, the graph is drawn in perspective: points and lines which are further away are drawn smaller. Note that the graph currently does not support a gray colored bottom side when drawn in perspective.
+#' @param showLegend : boolean. Default to none. If true, a legend is drawn for the graph (if the graph type supports it). By default a legend is drawn for dot and dot-color style graphs.
 #' @param showShadow : boolean. Default to false. Show shadow on the graph.
 #' @param style : string. Default to 'dot'. The style of the 3d graph. Available styles: bar, bar-color, bar-size, dot, dot-line, dot-color, dot-size, line, grid, or surface
 #' @param tooltip : boolean | function. Default to false. Show a tooltip showing the values of the hovered data point. The contents of the tooltip can be customized by providing a callback function as tooltip. In this case the function is called with an object containing parameters x, y, and z argument, and must return a string which may contain HTML.
@@ -59,6 +60,7 @@ visOptions3D <- function(graph,
                          showAnimationControls = NULL,
                          showGrid = NULL,
                          showPerspective = NULL,
+                         showLegend = NULL,
                          showShadow = NULL,
                          style = NULL,
                          tooltip = NULL,
@@ -100,6 +102,7 @@ visOptions3D <- function(graph,
   options$showAnimationControls = showAnimationControls
   options$showGrid = showGrid
   options$showPerspective = showPerspective
+  options$showLegend = showLegend
   options$showShadow = showShadow
   options$style = style
   if(is.logical(tooltip) | is.null(tooltip)){

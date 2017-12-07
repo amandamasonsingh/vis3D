@@ -7,7 +7,7 @@
 visOptions3D(graph, animationInterval = NULL, animationPreload = NULL,
   animationAutoStart = NULL, backgroundColor = NULL,
   cameraPosition = NULL, height = NULL, keepAspectRatio = NULL,
-  showAnimationControls = NULL, showGrid = NULL, showPerspective = NULL,
+  showAnimationControls = NULL, showGrid = NULL, showPerspective = NULL, showLegend = NULL,
   showShadow = NULL, style = NULL, tooltip = NULL, valueMax = NULL,
   valueMin = NULL, verticalRatio = NULL, width = NULL, xBarWidth = NULL,
   xCenter = NULL, xMax = NULL, xMin = NULL, xStep = NULL,
@@ -41,6 +41,8 @@ visOptions3D(graph, animationInterval = NULL, animationPreload = NULL,
 \item{showGrid}{: boolean. Default to true. If true, grid lines are draw in the x-y surface (the bottom of the 3d graph).}
 
 \item{showPerspective}{: boolean. Default to true. If true, the graph is drawn in perspective: points and lines which are further away are drawn smaller. Note that the graph currently does not support a gray colored bottom side when drawn in perspective.}
+
+\item{showLegend}{: boolean. Default to none. If true, a legend is drawn for the graph (if the graph type supports it). By default a legend is drawn for dot and dot-color style graphs.}
 
 \item{showShadow}{: boolean. Default to false. Show shadow on the graph.}
 
